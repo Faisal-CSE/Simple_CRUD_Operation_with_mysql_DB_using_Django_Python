@@ -1,0 +1,44 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="small_div">
+
+<div class="container">
+    <br>
+    <h2>Employee Info </h2>
+    <hr>
+
+    <form method="POST" action="/update/{{ employees.id }}">
+
+        {% csrf_token %}
+
+        <label class="form-group" for="eid">Emp ID: </label>
+        <input class="form-control" type="text" name="eid" value="{{ employees.eid }}" placeholder="{{ employees.eid }}">
+        <br>
+        <label class="form-group" for="name">Name: </label>
+        <input class="form-control" type="text" name="name" value="{{ employees.name }}" placeholder="{{ employees.name }}">
+        <br>
+        <label class="form-group" for="email">Email: </label>
+        <input class="form-control" type="text" name="email" value="{{ employees.email }}" placeholder="{{ employees.email }}">
+        <br>
+        <label class="form-group" for="contact">Contact: </label>
+        <input class="form-control" type="text" name="contact" value="{{ employees.contact }}" placeholder="{{ employees.contact }}">
+        <br>
+
+        <input class="btn btn-primary" type="submit" value="Update">
+
+    </form>
+
+
+</div>
+</div>
+
+</body>
+</html>

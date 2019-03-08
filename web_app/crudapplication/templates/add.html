@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+
+<div >
+
+<div >
+    <br>
+    <h2>Employee List</h2>
+    <hr>
+
+    <form method="POST" action="/emp">
+
+
+                {%  csrf_token %}
+                
+            <label >EID: </label>
+            <input class="form-control" type="text" name="eid"><br>
+
+            <label class="form-group" for="name">Name: </label>
+            <input class="form-control" type="text" name="name"><br>
+
+            <label class="form-group" for="email">Email: </label>
+            <input class="form-control" type="text" name="email"><br>
+
+            <label class="form-group" for="contact">Contact: </label>
+            <input class="form-control" type="text" name="contact"><br>
+
+            <input class="btn btn-success" type="submit" value="Create">
+
+
+        </form>
+        <br>
+
+
+</div>
+</div>
+
+</body>
+</html>
